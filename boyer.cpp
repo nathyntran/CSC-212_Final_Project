@@ -21,7 +21,7 @@ Boyer::Boyer(std::string txt_file, std::string pat_file, int search_size)
     this->txt.pop_back();
     this->pat.pop_back();
 
-    method_1(search_size);
+    sub_patterns(search_size);
 
 }
 
@@ -45,15 +45,18 @@ void Boyer::input_file(std::string file_name, std::string type)
     if (myFile.is_open())
     {   
 
+        // for each line in text...
         while (std::getline(myFile, line)) 
         {
 
+            // if from text file...
             if (type == "txt")
             {
                 this->txt.append(line);   
                 this->txt.append(" ");
 
             } 
+            // if from pattern file...
             else if (type == "pat")
             {
                 this->pat.append(line);
@@ -68,14 +71,23 @@ void Boyer::input_file(std::string file_name, std::string type)
     }
 }
 
+/*
+Output File:
+
+This function takes the vector of run times of each search and compiles them into a .csv file.
+The name of the file is created based on the algorithm used and the name of the pattern file
+*/
 void Boyer::output_file(std::vector<float> &time)
 {
 
+    // opens new file
     std::ofstream myFile;
     myFile.open("Boyer_" + this->outFile + ".csv");
-    
+
+    // inputs the first line of the .csv file, to specify input row and time row
     myFile << "input" << "," << "time" << '\n';
 
+    // for each line element in the time vector, input current index and time at that index
     for (int i = 1; i <= time.size(); i++)
     {
         myFile << i << "," << std::fixed << std::setprecision(6) << time[i - 1] << '\n';
@@ -85,8 +97,15 @@ void Boyer::output_file(std::vector<float> &time)
 
 }
 
-// methods to determine how sub-string is made
-void Boyer::method_1(int search_size)
+/*
+Sub Patterns:
+
+This function is used to divide up the pattern file a vector of strings of character size "search_size"
+or less (in the case it does not evenly divide into "search_size"). This function's purpose is to allow
+us to individually check that sub-pattern to see if it exists in the current text, to get a percentage
+of how many sub-patterns are found in the text, to get an more accurate plagerism check
+*/
+void Boyer::sub_patterns(int search_size)
 {
     // if search_size is not 0...
     if (search_size != 0) {
@@ -127,27 +146,14 @@ void Boyer::method_1(int search_size)
     }
 }
 
-void Boyer::method_2(int search_size)
-{
-    // if search size is equal to 1...
-    if (search_size == 1)
-    {
-        this->sub_pat.push_back(this->pat);
-    }
-    // if search size is not equal to 0 or 1...
-    else
-    {
-        // amount of characters per part
-        int n = this->pat.size() / search_size;
-        int i;
-        for (i = 0; i < this->pat.size(); i++)
-        {
+/*
+Bad Character Heuristic:
 
-        }
-    }
-}
-
-// creates a table for shifting based on the character *REVISE COMMENT*
+This function does the preprocessing for the bad character heuristic step of the
+Boyer Moore algorithm. This function creates a table to determine how many shifts 
+are needed depending on the current character. The table depends on the last 
+occurrence of a character to determine the value of the number of shifts.
+*/
 void Boyer::badCharHeuristic(int size, int badchar[NO_OF_CHARS])
 {
 
@@ -157,13 +163,18 @@ void Boyer::badCharHeuristic(int size, int badchar[NO_OF_CHARS])
     for (i = 0; i < NO_OF_CHARS; i++)
         badchar[i] = -1;
  
-    // Fill the actual value of last occurrence
-    // of a character
+    // Fill the actual value of last occurrence of a character
     for (i = 0; i < size; i++)
         badchar[(int) this->sub_pat[this->curr_pat][i]] = i;
 
 }
 
+/*
+Preprocess Strong Suffix:
+
+This function determines the location of the border, to determine the shifts
+required for this preprocessing step.
+*/
 void Boyer::preprocess_strong_suffix(int *shift, int *bpos, int m)
 {
 
@@ -196,6 +207,13 @@ void Boyer::preprocess_strong_suffix(int *shift, int *bpos, int m)
 
 }
 
+/*
+Preprocess Case2:
+
+This function does another preprocessing step for the good suffix heuristic,
+checking if the matching suffix of the pattern also occurs at the beginning
+of the pattern, to help determine the number of shifts.
+*/
 void Boyer::preprocess_case2(int *shift, int *bpos, int m)
 {
 
@@ -216,6 +234,12 @@ void Boyer::preprocess_case2(int *shift, int *bpos, int m)
 
 }
 
+/*
+Search:
+
+This function does the actual searching of the program. This function takes the current sub-pattern
+and runs it against the Boyer-Moore search algorithm. 
+*/
 int Boyer::search()
 {
 
@@ -300,14 +324,18 @@ int Boyer::search()
 
     }
 
-    // return number 0 if not found
+    // return number of indexes
     return found;
 }
 
 /*
-test1 is a function to run test cases
+Run:
+
+This function runs the entirety of the program, where it runs the search function and 
+records the time it takes for each search of every sub-pattern created, then calls the
+output function to create the .csv file
 */
-void Boyer::test()
+void Boyer::run()
 {
     // timing function
     unsigned long c_start, c_end;
@@ -321,24 +349,40 @@ void Boyer::test()
     
     // vector to hold all of the output times
     std::vector<float> time;
+
+    // function to keep track of the total time for the entirety of the pattern
     float total_time = 0;
+
+    // for every sub-pattern...
     for(int i = 0; i < this->sub_pat.size(); i++){
+
+        // start timer:
         c_start = std::clock();
+
+        // changes current pattern being checked
         this->curr_pat = i;
         int check = this->search();
 
+        // end timer:
         c_end = std::clock();
+
+        // pushes back time that the search function took to the time vector
         float output = 1.0 * (c_end - c_start) / CLOCKS_PER_SEC;
         time.push_back(output);
+
+        // adds to total time
         total_time += output;
 
+        // if sub-pattern found at least once in the text...
         if (check > 0){
+
+            // increment found per line counter
             found_per_line++;
         }
         
     }
 
-    
+    // calls the output file
     output_file(time);
     
 
