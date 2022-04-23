@@ -4,7 +4,7 @@
 
 To run the program, please download all the corresponding files from the GitHub. To compile the program, please open the Makefile and at the bottom, where "run:" is, please edit the line with "./output" using this format:
 
-"./output (text file name) (pattern file name> <search size)"
+"./output (text file name) (pattern file name) (search size)"
   
 Text file name is the original file which is being compared to, and the pattern file name is the text file that contains the pattern that is being compared to the text file.
   
