@@ -2,6 +2,8 @@
 
 ### Instructions
 
+#### Main Project - program files used to retrieve our data
+
 To run the program, please download all the corresponding files from the GitHub. To compile the program, please open the Makefile and at the bottom, where "run:" is, please edit the line with "./output" using this format:
 
 "./output (text file name) (pattern file name) (search size)"
@@ -13,3 +15,6 @@ Search size is the amount of characters each sub-string of the pattern file is g
 To compile the code without the make file, you can follow this outline:
   
 "g++ main.cpp boyer.cpp rabin.cpp -o run && ./run (text file name) (pattern file name) (search size)"
+
+#### Presentation - program files used for presentation with GUI
+
