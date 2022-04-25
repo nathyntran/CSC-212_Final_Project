@@ -18,3 +18,8 @@ To compile the code without the make file, you can follow this outline:
 
 #### Presentation - program files used for presentation with GUI
 
+The first thing you need to do is make sure to add all the files to a folder  repository  called GUI_Rabin-BoyerFiles. After this anyone is able to download or clone the repository file. 
+
+To run the program you should make sure whatever your IDE adds the following components: ASP.NET and web development, .NET desktop development , Desktop development with C++. 
+
+After this you should be able to run the FinalProject2.sln file. Note: the first time you build the program to run probably takes a few minutes.        
