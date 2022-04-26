@@ -1,0 +1,33 @@
+﻿  MainForm.cpp
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(358,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(359,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(353,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(354,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(415,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(416,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(406,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(407,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Program.cpp
+D:\Backup212\FinalProject2\FinalProject2\LoginForm.h(234,29): warning C4101: 'e': unreferenced local variable
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(358,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(359,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(353,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(354,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(415,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(416,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(406,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(407,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  main.cpp
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(358,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(359,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(353,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(354,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(415,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(416,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(406,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\MainForm.h(407,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Backup212\FinalProject2\FinalProject2\main.cpp(34,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Backup212\FinalProject2\FinalProject2\main.cpp(35,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  LoginForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  FinalProject2.vcxproj -> D:\Backup212\FinalProject2\x64\Debug\FinalProject2.exe

@@ -1,0 +1,9 @@
+C:\Users\Chris\OneDrive\Documents\CSC212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.vcxproj.AssemblyReference.cache
+C:\Users\Chris\OneDrive\Documents\CSC212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.LoginForm.resources
+C:\Users\Chris\OneDrive\Documents\CSC212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.MainForm.resources
+C:\Users\Chris\OneDrive\Documents\CSC212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.vcxproj.GenerateResource.cache
+D:\Backup212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.vcxproj.AssemblyReference.cache
+D:\Backup212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.LoginForm.resources
+D:\Backup212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.MainForm.resources
+D:\Backup212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.vcxproj.GenerateResource.cache
+D:\Backup212\FinalProject2\FinalProject2\x64\Debug\FinalProject2.exe

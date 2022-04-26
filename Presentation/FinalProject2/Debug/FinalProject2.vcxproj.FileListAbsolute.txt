@@ -1,0 +1,3 @@
+C:\Users\Chris\OneDrive\Documents\CSC212\FinalProject2\FinalProject2\Debug\FinalProject2.LoginForm.resources
+C:\Users\Chris\OneDrive\Documents\CSC212\FinalProject2\FinalProject2\Debug\FinalProject2.MainForm.resources
+C:\Users\Chris\OneDrive\Documents\CSC212\FinalProject2\FinalProject2\Debug\FinalProject2.vcxproj.GenerateResource.cache
