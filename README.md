@@ -11,6 +11,10 @@ To run the program, please download all the corresponding files from the GitHub.
 Text file name is the original file which is being compared to, and the pattern file name is the text file that contains the pattern that is being compared to the text file.
   
 Search size is the amount of characters each sub-string of the pattern file is going to be. If search size is 0, it will search the entire pattern against the text file. The search size should be greater than 6 for good search against the file. 
+
+After editing the Makefile, please type the following to run the code:
+
+"make run"
   
 To compile the code without the make file, you can follow this outline:
   
